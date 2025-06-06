@@ -21,11 +21,15 @@ export default {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env']
-          }
-        }
-      }
-    ]
+            presets: ['@babel/preset-env'],
+          },
+        },
+      },
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -34,9 +38,9 @@ export default {
         collapseWhitespace: true,
         removeComments: true,
         removeRedundantAttributes: true,
-        useShortDoctype: true
-      }
-    })
+        useShortDoctype: true,
+      },
+    }),
   ],
   optimization: {
     minimize: true,
