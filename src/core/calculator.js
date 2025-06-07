@@ -114,7 +114,6 @@ document
       handleEqual();
       return;
     }
-
     if (value === actionsEnum.TOGGLE_SIGN || value === actionsEnum.PERCENT) {
       handleSpecial(value);
       return;
