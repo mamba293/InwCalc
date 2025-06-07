@@ -17,9 +17,9 @@ const buttons = [
   '0',
   '.',
   '+',
-  'C',
-  '=',
   'AC',
+  '=',
+  '%',
 ];
 
 export function getKeyBoard() {

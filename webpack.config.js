@@ -55,7 +55,7 @@ export default {
       directory: path.join(__dirname, 'dist'),
     },
     compress: true,
-    port: 9000,
+    port: 4000,
     open: true,
     hot: true,
   },
