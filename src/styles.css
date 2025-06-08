@@ -1,7 +1,7 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -14,40 +14,124 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-width: 600px;
+  max-width: 360px;
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  background-color: #ffffff;
+  border-radius: 16px;
 }
 
-/* Классы Header */
+/* Header */
 .header {
+  width: 100%;
   text-align: center;
-  font-size: 20px;
+  font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 20px;
+  position: relative;
+  color: #333;
 }
 
-header button {
+.header button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 10px;
   all: unset;
   cursor: pointer;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   line-height: 1;
-  display: inline-block;
-  opacity: 1;
-  transition: opacity 0.2s ease;
+  color: #888;
+  transition: opacity 0.2s ease, color 0.2s ease;
 }
 
-header button:hover {
-  opacity: 0.6; 
+.header button:hover {
+  opacity: 0.6;
+  color: #333;
 }
 
-/* Классы MainContainer */
+.view_container {
+  width: 100%;
+  margin: -10px;
+  background-color: #f9fafb;
+  padding: 20px;
+  text-align: right;
+  border-radius: 8px;
+  font-size: 2rem; 
+  color: #222;
+  margin-bottom: 15px;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+
+}
+
+.view_content {
+  margin: 0;
+  word-wrap: break-word;
+}
 
 .keyboard_container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 колонки равной ширины */
-  gap: 10px; /* расстояние между кнопками */
-  padding: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  padding: 10px 0;
+  width: 100%;
 }
+
+.keyboard_button {
+  padding: 18px;
+  font-size: 1.25rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  background-color: #e0e0e0;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.keyboard_button:active {
+  transform: scale(0.98);
+}
+
+.keyboard_button:hover {
+  background-color: #d5d5d5;
+}
+
+/* Special Buttons */
+.keyboard_button[data-value="AC"] {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.keyboard_button[data-value="AC"]:hover {
+  background-color: #e85858;
+}
+
+.keyboard_button[data-value="="] {
+  background-color: #4caf50;
+  color: white;
+}
+
+.keyboard_button[data-value="="]:hover {
+  background-color: #449d48;
+}
+
+.keyboard_button[data-value="/"],
+.keyboard_button[data-value="*"],
+.keyboard_button[data-value="-"],
+.keyboard_button[data-value="+"],
+.keyboard_button[data-value="%"],
+.keyboard_button[data-value="+/-"] {
+  background-color: #2196f3;
+  color: white;
+}
+
+.keyboard_button[data-value="/"]:hover,
+.keyboard_button[data-value="*"]:hover,
+.keyboard_button[data-value="-"]:hover,
+.keyboard_button[data-value="+"]:hover,
+.keyboard_button[data-value="%"]:hover,
+.keyboard_button[data-value="+/-"]:hover {
+  background-color: #1976d2;
+}
+

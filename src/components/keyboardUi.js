@@ -13,12 +13,12 @@ const buttons = [
   '8',
   '9',
   '-',
-  '+/-',
+  '=',
   '0',
   '.',
   '+',
   'AC',
-  '=',
+  '+/-',
   '%',
 ];
 
@@ -31,3 +31,7 @@ export function getKeyBoard() {
     keyboardContainer.appendChild(btn);
   });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  getKeyBoard();
+});
