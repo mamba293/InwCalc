@@ -28,7 +28,8 @@ function updateView(content) {
   if (length <= 14) {
     viewContent.style.fontSize = `${baseSize}rem`;
   } else {
-    const newSize = Math.max(minSize, baseSize - (length - 14) * 0.1);
+    const otherSize = baseSize - (length - 14) * 0.1;
+    const newSize = minSize > otherSize ? minSize : otherSize;
     viewContent.style.fontSize = `${newSize}rem`;
   }
 }
