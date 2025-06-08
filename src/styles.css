@@ -1,7 +1,46 @@
+:root {
+  --bg-color: #f0f2f5;
+  --container-bg: #ffffff;
+  --text-color: #222;
+  --button-bg: #e0e0e0;
+  --button-hover: #d5d5d5;
+
+  --btn-equals-bg: #4caf50;
+  --btn-equals-hover: #449d48;
+
+  --btn-ac-bg: #ff6b6b;
+  --btn-ac-hover: #e85858;
+
+  --btn-op-bg: #2196f3;
+  --btn-op-hover: #1976d2;
+
+  --btn-text-color: white;
+}
+
+body.dark {
+  --bg-color: #121212;
+  --container-bg: #1e1e1e;
+  --text-color: #f0f0f0;
+  --button-bg: #333;
+  --button-hover: #444;
+
+   --btn-equals-bg: #388e3c;
+  --btn-equals-hover: #2e7d32;
+
+  --btn-ac-bg: #d84315;
+  --btn-ac-hover: #bf360c;
+
+  --btn-op-bg: #1565c0;
+  --btn-op-hover: #0d47a1;
+
+  --btn-text-color: white;
+}
+
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f0f2f5;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -17,7 +56,7 @@ body {
   max-width: 360px;
   padding: 20px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-  background-color: #ffffff;
+  background-color: var(--container-bg);
   border-radius: 16px;
 }
 
@@ -85,7 +124,7 @@ body {
   border: none;
   border-radius: 12px;
   cursor: pointer;
-  background-color: #e0e0e0;
+  background-color: var(--button-bg);
   transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
@@ -94,36 +133,38 @@ body {
 }
 
 .keyboard_button:hover {
-  background-color: #d5d5d5;
+   background-color: var(--button-hover);
 }
 
 /* Special Buttons */
 .keyboard_button[data-value="AC"] {
-  background-color: #ff6b6b;
-  color: white;
+  background-color: var(--btn-ac-bg);
+  color: var(--btn-text-color);
 }
 
 .keyboard_button[data-value="AC"]:hover {
-  background-color: #e85858;
+  background-color: var(--btn-ac-hover);
 }
 
+/* = button */
 .keyboard_button[data-value="="] {
-  background-color: #4caf50;
-  color: white;
+  background-color: var(--btn-equals-bg);
+  color: var(--btn-text-color);
 }
 
 .keyboard_button[data-value="="]:hover {
-  background-color: #449d48;
+  background-color: var(--btn-equals-hover);
 }
 
+/* Operation buttons */
 .keyboard_button[data-value="/"],
 .keyboard_button[data-value="*"],
 .keyboard_button[data-value="-"],
 .keyboard_button[data-value="+"],
 .keyboard_button[data-value="%"],
 .keyboard_button[data-value="+/-"] {
-  background-color: #2196f3;
-  color: white;
+  background-color: var(--btn-op-bg);
+  color: var(--btn-text-color);
 }
 
 .keyboard_button[data-value="/"]:hover,
@@ -132,6 +173,6 @@ body {
 .keyboard_button[data-value="+"]:hover,
 .keyboard_button[data-value="%"]:hover,
 .keyboard_button[data-value="+/-"]:hover {
-  background-color: #1976d2;
+  background-color: var(--btn-op-hover);
 }
 

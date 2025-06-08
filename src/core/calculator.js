@@ -22,7 +22,7 @@ function updateView(content) {
 
   const length = content.toString().length;
   const baseSize = 2;
-  const minSize = 1;
+  const minSize = 1.2;
   const viewContent = document.querySelector('.view_content');
 
   if (length <= 14) {
