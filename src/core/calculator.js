@@ -1,3 +1,5 @@
+import { formatPercent } from './formatPercent.js';
+
 let a = '';
 let b = '';
 let sign = '';
@@ -53,11 +55,13 @@ function calculate(a, b, sign) {
       return x - y;
     case actionsEnum.MULTIPLY:
       return x * y;
-    case actionsEnum.DIVIDE:
+    case actionsEnum.DIVIDE: {
       if (y === 0) {
         return 'Error';
       }
-      return x / y;
+      const divisionResult = x / y;
+      return +divisionResult.toFixed(MAX_LENGTH);
+    }
     default:
       return b;
   }
@@ -73,6 +77,7 @@ function handleEqual() {
     clearAll();
   } else {
     a = result.toString();
+    console.log(a);
     b = '';
     sign = '';
     finish = true;
@@ -130,10 +135,10 @@ function handleSpecial(value) {
 
   if (value === actionsEnum.PERCENT) {
     if (b && !finish) {
-      b = (parseFloat(b) / 100).toString();
+      b = formatPercent(b);
       updateView(b);
     } else if (a) {
-      a = (parseFloat(a) / 100).toString();
+      a = formatPercent(a);
       updateView(a);
     }
   }
