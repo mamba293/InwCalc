@@ -115,7 +115,6 @@ function inputDigit(value) {
     b += value;
     updateView(b);
   }
-  console.log(a, b, sign);
 }
 
 function handleSpecial(value) {
