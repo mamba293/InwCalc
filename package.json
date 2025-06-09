@@ -1,11 +1,10 @@
 {
   "name": "inwcalc",
   "version": "1.0.0",
-  "description": "",
+  "description": "innowise calculator",
   "main": "index.js",
   "scripts": {
     "start:dev": "webpack serve --mode development",
-    "start:prod": "webpack --mode production",
     "lint": "eslint .",
     "prettier": "prettier --write .",
     "serve": "serve dist",
