@@ -8,6 +8,7 @@
     "lint": "eslint .",
     "prettier": "prettier --write .",
     "serve": "serve dist",
+    "build": "webpack",
     "deploy": "webpack && npx serve dist"
   },
   "lint-staged": {
