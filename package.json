@@ -8,9 +8,8 @@
     "start:prod": "webpack --mode production",
     "lint": "eslint .",
     "prettier": "prettier --write .",
-    "build": "webpack",
     "serve": "serve dist",
-    "deploy": "npm run build && npm run serve"
+    "deploy": "webpack && npx serve dist"
   },
   "lint-staged": {
     "*.{js,html}": [
