@@ -60,7 +60,6 @@ body {
   border-radius: 16px;
 }
 
-/* Header */
 .header {
   display: flex;
   align-items: center;
@@ -98,7 +97,6 @@ body {
   transition: left 0.3s ease;
 }
 
-/* Dark mode styles */
 body.dark .theme-toggle {
   background-color: #555;
 }
@@ -155,7 +153,6 @@ body.dark .theme-toggle .slider {
   background-color: var(--button-hover);
 }
 
-/* Special Buttons */
 .keyboard_button[data-value='AC'] {
   background-color: var(--btn-ac-bg);
   color: var(--btn-text-color);
@@ -165,7 +162,6 @@ body.dark .theme-toggle .slider {
   background-color: var(--btn-ac-hover);
 }
 
-/* = button */
 .keyboard_button[data-value='='] {
   background-color: var(--btn-equals-bg);
   color: var(--btn-text-color);
@@ -175,7 +171,6 @@ body.dark .theme-toggle .slider {
   background-color: var(--btn-equals-hover);
 }
 
-/* Operation buttons */
 .keyboard_button[data-value='/'],
 .keyboard_button[data-value='*'],
 .keyboard_button[data-value='-'],
