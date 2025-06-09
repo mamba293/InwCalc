@@ -4,14 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack serve --mode development",
-    "build": "webpack --mode production",
+    "start:dev": "webpack serve --mode development",
+    "start:prod": "webpack --mode production",
     "lint": "eslint .",
     "prettier": "prettier --write .",
-    "prepare": "husky install"
+    "build": "webpack",
+    "serve": "serve dist",
+    "deploy": "npm run build && npm run serve"
   },
   "lint-staged": {
-    "*.{js,html}": [
+    "*.{js,html,css}": [
       "prettier --write",
       "eslint --fix"
     ]

@@ -8,14 +8,8 @@ core содержит
 
 services - вынес логику смены темы в отдельный сервис;
 
-Для того чтобы запустить проект введите следующие команды :
+Husky нужен для создания pre-commit hook;
 
-1) npm install
 
-2) npm install --save-dev webpack webpack-cli webpack-dev-server html-webpack-plugin babel-loader @babel/core @babel/preset-env style-loader css-loader
-
-3) npm run start
-
-3)* npm run build создаст bundle
-
+How to run the app:
 
