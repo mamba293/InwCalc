@@ -87,12 +87,6 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.theme-toggle .icon {
-  font-size: 14px;
-  z-index: 1;
-  pointer-events: none;
-}
-
 .theme-toggle .slider {
   position: absolute;
   top: 3px;
